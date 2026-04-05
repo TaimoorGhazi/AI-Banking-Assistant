@@ -1,12 +1,12 @@
-# 🏦 SecureBank AI Assistant
+# SecureBank AI Assistant
 
-> **CS416: Large Language Models · BESE-13 · NUST SEECS**
+> CS416: Large Language Models - BESE-13 - NUST SEECS
 
 An LLM-powered customer service chatbot for banking queries, built with a full MLOps pipeline.
 
 ---
 
-## 👥 Team Members
+## Team Members
 
 | Member | GitHub | Role |
 |--------|--------|------|
@@ -15,7 +15,7 @@ An LLM-powered customer service chatbot for banking queries, built with a full M
 
 ---
 
-## 🧠 What This Project Does
+## What This Project Does
 
 An AI banking assistant that:
 - Answers customer queries using **RAG** (Retrieval-Augmented Generation)
@@ -26,29 +26,29 @@ An AI banking assistant that:
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 [ Streamlit UI ]
-      │ HTTP
+      | HTTP
 [ FastAPI Backend ]
-      │
-[ Guard Rails ]        ← jailbreak detection, PII filter
-      │
-[ RAG Pipeline ]       ← LangChain + FAISS vector search
-      │
-[ Llama-3.2-3B ]       ← 4-bit quantized + LoRA fine-tuned
-      │
-[ Data Layer ]         ← DVC-tracked corpus + FAISS index
+      |
+[ Guard Rails ]        <- jailbreak detection, PII filter
+      |
+[ RAG Pipeline ]       <- LangChain + FAISS vector search
+      |
+[ Llama-3.2-3B ]       <- 4-bit quantized + LoRA fine-tuned
+      |
+[ Data Layer ]         <- DVC-tracked corpus + FAISS index
 
-[ MLflow → DagsHub ]   ← experiment tracking
-[ Airflow ]            ← pipeline orchestration
-[ Docker ]             ← containerized deployment
+[ MLflow -> DagsHub ]  <- experiment tracking
+[ Airflow ]            <- pipeline orchestration
+[ Docker ]             <- containerized deployment
 ```
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Component | Tool |
 |-----------|------|
@@ -65,31 +65,31 @@ An AI banking assistant that:
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 AI-Banking-Assistant/
-├── src/AI_Banking_Assistant/      # Main source code
-│   ├── core/                      # Config, logging, constants
-│   ├── agents/                    # LangGraph agents
-│   ├── llm/                       # Model loading, inference, fine-tuning
-│   ├── retrieval/                 # RAG embeddings and FAISS
-│   ├── preprocessing/             # Data cleaning, PII anonymization
-│   ├── guardrails/                # Safety filters
-│   ├── api/                       # FastAPI backend
-│   └── ui/                        # Streamlit frontend
-├── airflow/dags/                  # Pipeline orchestration
-├── data/                          # Data (DVC-tracked)
-├── tests/                         # Unit and integration tests
-├── config/                        # YAML configurations
-├── docker/                        # Dockerfiles
-├── docs/                          # Documentation
-└── scripts/                       # Utility scripts
+|-- src/AI_Banking_Assistant/      # Main source code
+|   |-- core/                      # Config, logging, constants
+|   |-- agents/                    # LangGraph agents
+|   |-- llm/                       # Model loading, inference, fine-tuning
+|   |-- retrieval/                 # RAG embeddings and FAISS
+|   |-- preprocessing/             # Data cleaning, PII anonymization
+|   |-- guardrails/                # Safety filters
+|   |-- api/                       # FastAPI backend
+|   +-- ui/                        # Streamlit frontend
+|-- airflow/dags/                  # Pipeline orchestration
+|-- data/                          # Data (DVC-tracked)
+|-- tests/                         # Unit and integration tests
+|-- config/                        # YAML configurations
+|-- docker/                        # Dockerfiles
+|-- docs/                          # Documentation
++-- scripts/                       # Utility scripts
 ```
 
 ---
 
-## 🚀 Setup & Running
+## Setup and Running
 
 ### Prerequisites
 - Python 3.11+
@@ -118,20 +118,20 @@ streamlit run src/AI_Banking_Assistant/ui/app.py
 
 ---
 
-## 📊 Development Progress
+## Development Progress
 
 - [x] Phase 1: Project Foundation (structure, configs, core module, DVC, CI/CD)
-- [ ] Phase 2: Preprocessing Module (data ingestion, PII, chunking)
+- [x] Phase 2: Preprocessing Module (data ingestion, PII, chunking)
 - [ ] Phase 3: RAG Retrieval System
 - [ ] Phase 4: LLM Module
 - [ ] Phase 5: Guardrails
 - [ ] Phase 6: LangGraph Agents
-- [ ] Phase 7: API & UI
+- [ ] Phase 7: API and UI
 - [ ] Phase 8: MLOps Integration
-- [ ] Phase 9: Documentation & Tests
+- [ ] Phase 9: Documentation and Tests
 
 ---
 
-## 📬 Contact
+## Contact
 
 Course queries: aabid.msai23seecs@seecs.edu.pk
