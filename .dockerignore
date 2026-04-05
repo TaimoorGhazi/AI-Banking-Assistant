@@ -1,0 +1,38 @@
+# Virtual environments
+.venv/
+venv/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+
+# Environment
+.env
+
+# Planning docs
+_PROJECT_PLANNING/
+Others/
+OtherFiles/
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Tests
+tests/
+
+# Notebooks
+notebooks/
+
+# Documentation
+docs/
+
+# DVC
+.dvc/
+
+# MLflow local runs
+mlflow/mlruns/
