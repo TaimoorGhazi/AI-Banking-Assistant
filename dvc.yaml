@@ -1,0 +1,41 @@
+# DVC Pipeline Definition
+# Run with: dvc repro
+
+stages:
+  preprocess:
+    cmd: python -m src.AI_Banking_Assistant.preprocessing.data_ingestion
+    deps:
+      - src/AI_Banking_Assistant/preprocessing/data_ingestion.py
+      - src/AI_Banking_Assistant/preprocessing/text_cleaner.py
+      - src/AI_Banking_Assistant/preprocessing/pii_anonymizer.py
+      - data/raw/
+    outs:
+      - data/processed/
+    params:
+      - preprocessing.chunk_size
+      - preprocessing.chunk_overlap
+
+  embed:
+    cmd: python -m src.AI_Banking_Assistant.retrieval.indexer
+    deps:
+      - src/AI_Banking_Assistant/retrieval/indexer.py
+      - src/AI_Banking_Assistant/retrieval/embeddings.py
+      - data/processed/
+    outs:
+      - data/faiss_index/
+    params:
+      - retrieval.embedding_model
+      - retrieval.top_k
+
+  # Fine-tuning stage (run manually or on schedule)
+  # finetune:
+  #   cmd: python -m src.AI_Banking_Assistant.llm.finetuning.train
+  #   deps:
+  #     - src/AI_Banking_Assistant/llm/finetuning/train.py
+  #     - data/finetune/train.jsonl
+  #   outs:
+  #     - src/AI_Banking_Assistant/llm/finetuning/output/lora_adapter/
+  #   params:
+  #     - finetuning.lora_rank
+  #     - finetuning.learning_rate
+  #     - finetuning.num_epochs
