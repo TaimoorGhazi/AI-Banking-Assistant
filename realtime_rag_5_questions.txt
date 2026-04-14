@@ -1,0 +1,18 @@
+RAG Realtime Validation Set (5 Questions)
+
+Note: This file contains fictional test facts for validating document upload and retrieval.
+
+Q1: What is the onboarding fee for the BlueWave Student package?
+A1: The onboarding fee for the BlueWave Student package is PKR 17.
+
+Q2: What is the temporary support code for BlueWave Student?
+A2: The temporary support code is BW-1704.
+
+Q3: What cashback rate is offered on BlueWave Student in-app bill payments?
+A3: BlueWave Student offers 3% cashback on in-app bill payments.
+
+Q4: What is the instant replacement fee for a BlueWave Student debit card?
+A4: The instant replacement fee is PKR 150.
+
+Q5: What is the nightly transfer maintenance window for BlueWave Student?
+A5: The transfer maintenance window is from 2:15 AM to 2:30 AM.

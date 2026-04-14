@@ -1,0 +1,7 @@
+rag:
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  chunk_size: 512
+  chunk_overlap: 50
+  top_k: 5
+  index_path: data/faiss_index
+  corpus_path: data/raw

@@ -1,0 +1,53 @@
+jailbreak_patterns:
+  - pattern: "ignore previous instructions"
+    severity: high
+  - pattern: "ignore all prior instructions"
+    severity: high
+  - pattern: "disregard the above"
+    severity: high
+  - pattern: "you are now"
+    severity: medium
+  - pattern: "show me your prompt"
+    severity: high
+  - pattern: "reveal your system instructions"
+    severity: high
+  - pattern: "bypass safety"
+    severity: high
+  - pattern: "developer mode"
+    severity: high
+  - pattern: "override your instructions"
+    severity: high
+  - pattern: "forget previous context"
+    severity: high
+  - pattern: "prompt injection"
+    severity: high
+  - pattern: "jailbreak"
+    severity: high
+
+banking_keywords:
+  - account
+  - balance
+  - transfer
+  - transaction
+  - payment
+  - deposit
+  - withdraw
+  - loan
+  - card
+  - credit
+  - debit
+  - mortgage
+  - statement
+  - fee
+  - interest
+  - routing
+  - branch
+  - securebank
+
+max_input_length: 2048
+
+blocked_entities:
+  - CREDIT_CARD
+  - US_SSN
+  - EMAIL_ADDRESS
+  - PHONE_NUMBER

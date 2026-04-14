@@ -1,0 +1,11 @@
+guardrails:
+  max_input_length: 2048
+  max_output_length: 4096
+  redact_pii: true
+  block_prompt_injection: true
+  audit_log_path: logs/security_audit.log
+  blocked_patterns:
+    - prompt injection
+    - ignore previous instructions
+    - system prompt
+    - developer message

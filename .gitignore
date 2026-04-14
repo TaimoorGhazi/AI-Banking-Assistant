@@ -1,0 +1,65 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# ===== Virtual Environments =====
+.venv/
+venv/
+ENV/
+
+# ===== Environment Variables =====
+.env
+
+# ===== Data (tracked by DVC) =====
+data/raw/
+data/processed/
+data/finetune/
+data/faiss_index/
+
+# ===== MLflow =====
+mlflow/mlruns/
+mlflow/artifacts/
+
+# ===== Logs =====
+logs/*.log
+
+# ===== Model Outputs =====
+src/AI_Banking_Assistant/llm/finetuning/output/
+
+# ===== IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== Docker =====
+*.tar
+
+# ===== Airflow =====
+airflow/logs/
+
+# ===== Project Planning (private) =====
+_PROJECT_PLANNING/
+Others/
+OtherFiles/
+
+# ===== Claude / Gemini =====
+.claude/
+.gemini/
+
+# ===== Local Artifacts =====
+lora_adapter/
+lora_adapter.zip
+NUST Bank-Product-Knowledge (1).xlsx
+_tmp_*.py
